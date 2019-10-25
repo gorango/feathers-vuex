@@ -89,6 +89,7 @@ exports.default = {
           return this.$store
             .dispatch(this.service + '/find', params)
             .then(function() {
+              _this.$emit('done')
               _this.isFindPending = false
             })
         }

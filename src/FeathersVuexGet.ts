@@ -92,6 +92,7 @@ export default {
               getArgs.length === 1 ? this.id : getArgs
             )
             .then(() => {
+              this.$emit('done')
               this.isGetPending = false
             })
         }
