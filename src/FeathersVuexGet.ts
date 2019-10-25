@@ -91,8 +91,8 @@ export default {
               `${this.service}/get`,
               getArgs.length === 1 ? this.id : getArgs
             )
-            .then(() => {
-              this.$emit('done')
+            .then((res: any) => {
+              this.$emit('done', res)
               this.isGetPending = false
             })
         }

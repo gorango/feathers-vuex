@@ -92,8 +92,8 @@ exports.default = {
               this.service + '/get',
               getArgs.length === 1 ? this.id : getArgs
             )
-            .then(function() {
-              _this.$emit('done')
+            .then(function(res) {
+              _this.$emit('done', res)
               _this.isGetPending = false
             })
         }

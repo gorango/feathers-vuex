@@ -88,8 +88,8 @@ exports.default = {
           var params = { query: query, qid: this.qid || 'default' }
           return this.$store
             .dispatch(this.service + '/find', params)
-            .then(function() {
-              _this.$emit('done')
+            .then(function(res) {
+              _this.$emit('done', res)
               _this.isFindPending = false
             })
         }
